@@ -1,5 +1,5 @@
 # 即時車輛違規系統
-即時車輛偵測違規系統
+
 ## 簡介
   傳統的車燈違規偵測方式需要警方投入大量人力來監控車輛是否違規，這不僅耗費了大量的時間和人力成本，還容易導致誤判。為了減少警方的人力負擔，並提升交通執法的效率，我們研發一套基於人工智慧的自動化車燈違規偵測系統，取代傳統的人工方式，提高執法的效率及準確率。
 
@@ -25,19 +25,23 @@
 
 ### 訓練模型
 1. 執行訓練指令：
-    ```bash
-    python train_model.py
-    ```
-    - 確保訓練資料正確導入，並根據專案需求調整超參數。
+    - 轉彎模型
+      ```bash
+      python ResNet_train/test.py
+      ```
+    - 車燈辨識模型
+      ```bash
+      python CNNLSTM_train/test.py
+      ```
     
-2. 訓練過程中，記錄模型的訓練與測試指標（準確率、損失值等），保存至 log 文件。
+3. 訓練過程中，記錄模型的訓練與測試指標（準確率、損失值等），保存至 log 文件。
 
 ### 測試模型
 1. 執行測試指令：
     ```bash
-    python test_model.py
+     python ccc.py --name filefolder
     ```
-    - 測試集需與訓練集不同，並在測試後輸出結果。
+    - filefolder：測試集的資料夾
 
 ## 功能說明
 簡單描述專案的主要功能：
@@ -45,7 +49,7 @@
 2. **結果輸出**: 系統將輸出車輛違規結果及相關數據。
 
 ## 模型架構
-
+![image](https://github.com/candycca/CCU-Headlight-violation-detection-system/blob/main/docs/%E7%B3%BB%E7%B5%B1%E6%9E%B6%E6%A7%8B%E5%9C%96.png)
 
 ## 文件結構(編輯中
 
